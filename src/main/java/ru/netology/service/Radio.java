@@ -11,15 +11,13 @@ public class Radio {
     // numberMinRadio = 0
     // numberMaxRadio = 10
     // если достиг максимума (минимума), то дальнейшее нажатие ни к чему не приводит
-    private String name;
+
     private int soundVolumeCurrent;
     private int soundVolumeMin;
     private int soundVolumeMax;
     private int numberCurrentRadio;
     private int numberMinRadio;
     private int numberMaxRadio;
-    private int nextRadio;
-    private int PreviousRadio;
 
 
     public int getSoundVolumeCurrent() {
@@ -86,7 +84,6 @@ public class Radio {
     }
 
     public int previousRadio() {
-        int channel = 0;
         if (numberCurrentRadio >= numberMinRadio) {
             numberCurrentRadio = numberCurrentRadio - 1;
         }
