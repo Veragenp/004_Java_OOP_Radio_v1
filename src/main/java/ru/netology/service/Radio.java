@@ -73,14 +73,7 @@ public class Radio {
     }
 
     public int nextRadio() {
-        if (numberCurrentRadio == numberMaxRadio){
-            return numberCurrentRadio = numberMinRadio;
-        }
-
-        if (numberCurrentRadio < numberMaxRadio) {
-            numberCurrentRadio = numberCurrentRadio + 1;
-
-        }
+        numberCurrentRadio = numberCurrentRadio + 1;
         if (numberCurrentRadio > numberMaxRadio) {
             numberCurrentRadio = numberMinRadio;
         }
@@ -88,19 +81,10 @@ public class Radio {
     }
 
     public int previousRadio() {
-        if (numberCurrentRadio == numberMinRadio){
-            return numberCurrentRadio = numberMaxRadio;
-        }
-        if (numberCurrentRadio > numberMinRadio) {
-            numberCurrentRadio = numberCurrentRadio - 1;
-        }
-
+        numberCurrentRadio = numberCurrentRadio - 1;
         if (numberCurrentRadio < numberMinRadio) {
             numberCurrentRadio = numberMaxRadio;
         }
-
-
-
         return numberCurrentRadio;
     }
 }
