@@ -50,7 +50,6 @@ class RadioTest {
     @Test
     void shouldSetNumberCurrentRadioEqualMax() {
         Radio radio = new Radio();
-        radio.setNumberMaxRadio(9);
         radio.setNumberMinRadio(0);
         radio.setNumberCurrentRadio(9);
         assertEquals(9, radio.getNumberCurrentRadio());
@@ -58,8 +57,7 @@ class RadioTest {
 
     @Test
     void shouldSetNumberCurrentRadioEqualMin() {
-        Radio radio = new Radio();
-        radio.setNumberMaxRadio(9);
+        Radio radio = new Radio(10);
         radio.setNumberMinRadio(0);
         radio.setNumberCurrentRadio(0);
         assertEquals(0, radio.getNumberCurrentRadio());
@@ -67,8 +65,7 @@ class RadioTest {
 
     @Test
     void shouldSetNumberCurrentRadioAboveMax() {
-        Radio radio = new Radio();
-        radio.setNumberMaxRadio(9);
+        Radio radio = new Radio(10);
         radio.setNumberMinRadio(0);
         radio.setNumberCurrentRadio(10);
         assertEquals(0, radio.getNumberCurrentRadio());
@@ -76,8 +73,7 @@ class RadioTest {
 
     @Test
     void shouldSetNumberCurrentRadioBelowMin() {
-        Radio radio = new Radio();
-        radio.setNumberMaxRadio(9);
+        Radio radio = new Radio(10);
         radio.setNumberMinRadio(0);
         radio.setNumberCurrentRadio(-1);
         assertEquals(0, radio.getNumberCurrentRadio());
@@ -86,8 +82,7 @@ class RadioTest {
 
     @Test
     void shouldSwitchNextRadio() {
-        Radio radio = new Radio();
-        radio.setNumberMaxRadio(9);
+        Radio radio = new Radio(10);
         radio.setNumberMinRadio(0);
         radio.setNumberCurrentRadio(8);
         radio.nextRadio();
@@ -97,8 +92,7 @@ class RadioTest {
 
     @Test
     void shouldNotSwitchAboveMaxRadio() {
-        Radio radio = new Radio();
-        radio.setNumberMaxRadio(9);
+        Radio radio = new Radio(10);
         radio.setNumberMinRadio(0);
         radio.setNumberCurrentRadio(9);
         radio.nextRadio();
@@ -108,8 +102,7 @@ class RadioTest {
 
     @Test
     void shouldNotSwitchBelowMinRadio() {
-        Radio radio = new Radio();
-        radio.setNumberMaxRadio(9);
+        Radio radio = new Radio(10);
         radio.setNumberMinRadio(0);
         radio.setNumberCurrentRadio(0);
         radio.previousRadio();
@@ -119,8 +112,7 @@ class RadioTest {
 
     @Test
     void shouldSwitchBelowRadio() {
-        Radio radio = new Radio();
-        radio.setNumberMaxRadio(9);
+        Radio radio = new Radio(10);
         radio.setNumberMinRadio(0);
         radio.setNumberCurrentRadio(1);
         radio.previousRadio();
