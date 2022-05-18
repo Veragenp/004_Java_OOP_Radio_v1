@@ -29,14 +29,6 @@ public class Radio {
         this.amountOffRadio = amountOffRadio;
     }
 
-    public int getAmountOffRadio() {
-        return amountOffRadio;
-    }
-
-    public void setAmountOffRadio(int amountOffRadio) {
-        this.amountOffRadio = amountOffRadio;
-    }
-
     public int getSoundVolumeCurrent() {
         return soundVolumeCurrent;
     }
