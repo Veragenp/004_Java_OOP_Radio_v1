@@ -20,11 +20,11 @@ public class Radio {
     private int soundVolumeMax;
     private int numberCurrentRadio;
     private int numberMinRadio;
-    //private int numberMaxRadio;
     private int amountOffRadio = 10;
 
     public Radio() {
     }
+
     public Radio(int amountOffRadio) {
         this.amountOffRadio = amountOffRadio;
     }
@@ -77,10 +77,6 @@ public class Radio {
     public void setNumberMinRadio(int numberMinRadio) {
         this.numberMinRadio = numberMinRadio;
     }
-
-    //public void setNumberMaxRadio(int numberMaxRadio) {
-     //   this.numberMaxRadio = numberMaxRadio;
-    //}
 
     public int nextRadio() {
         numberCurrentRadio = numberCurrentRadio + 1;
